@@ -1,3 +1,7 @@
-1. "Add file" → "Create new file"
-2. Nom : package.json
-3. COPIE ça :
+{
+  "name": "inshape-nutrition",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  }
+}

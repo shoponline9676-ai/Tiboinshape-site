@@ -2,152 +2,148 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>InShape Nutrition</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InShape Nutrition - Thibaut Inchev</title>
 <style>
-* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body {line-height:1.6;color:#333;overflow-x:hidden}
-.navbar {position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0}
-.nav-container {max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-.nav-logo {font-size:1.5rem;font-weight:700;color:#ff6b35}
-.nav-menu {display:flex;list-style:none;gap:2rem}
-.nav-menu a {text-decoration:none;color:#333;font-weight:500;transition:color .3s}
-.nav-menu a:hover {color:#ff6b35}
-.hamburger {display:none;flex-direction:column;cursor:pointer}
-.hamburger span {width:25px;height:3px;background:#333;margin:3px 0}
-.hero {min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding-top:80px}
-.hero-container {max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.hero-title {font-size:3rem;font-weight:700;margin-bottom:1.5rem;line-height:1.2}
-.gradient-text {background:linear-gradient(45deg,#ff6b35,#f7931e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-subtitle {font-size:1.3rem;margin-bottom:2rem;opacity:.9}
-.hero-buttons {display:flex;gap:1rem}
-.btn {padding:1rem 2rem;border-radius:50px;text-decoration:none;font-weight:600;transition:all .3s;font-size:1rem;cursor:pointer}
-.btn-primary {background:linear-gradient(45deg,#ff6b35,#f7931e);color:white;border:none}
-.btn-primary:hover {transform:translateY(-3px);box-shadow:0 10px 30px rgba(255,107,53,.4)}
-.btn-secondary {background:transparent;color:white;border:2px solid white}
-.btn-secondary:hover {background:white;color:#333}
-.hero-image img {width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.3);max-width:500px}
-.programmes {padding:100px 0;background:#f8f9fa}
-.container {max-width:1200px;margin:0 auto;padding:0 20px}
-.section-title {text-align:center;font-size:2.5rem;margin-bottom:4rem;color:#333}
-.programmes-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
-.programme-card {background:white;padding:2.5rem;border-radius:20px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.1);transition:all .3s}
-.programme-card:hover {transform:translateY(-10px);box-shadow:0 20px 60px rgba(0,0,0,.15)}
-.programme-card.featured {border:3px solid #ff6b35}
-.programme-icon {width:80px;height:80px;background:linear-gradient(45deg,#ff6b35,#f7931e);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.8rem;color:white}
-.programme-card h3 {font-size:1.5rem;margin-bottom:1rem}
-.price {font-size:2rem;font-weight:700;color:#ff6b35;margin-top:1.5rem}
-.price span {font-size:1rem;color:#666;text-decoration:line-through}
-.temoignages {padding:100px 0}
-.temoignages-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
-.temoignage {background:white;padding:2rem;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.1);text-align:center}
-.temoignage img {width:80px;height:80px;border-radius:50%;margin-bottom:1rem}
-.temoignage p {font-style:italic;margin-bottom:1rem;color:#666}
-.temoignage h4 {color:#333}
-.contact {padding:100px 0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white}
-.contact-form {max-width:600px;margin:0 auto}
-.contact-form input,.contact-form textarea {width:100%;padding:1rem;margin-bottom:1rem;border:none;border-radius:12px;background:rgba(255,255,255,.1);color:white}
-.contact-form input::placeholder,.contact-form textarea::placeholder {color:rgba(255,255,255,.7)}
-@media (max-width:768px) {.hero-container {grid-template-columns:1fr;text-align:center}.nav-menu {display:none}}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body {background:#0f0f23;color:#fff;overflow-x:hidden}
+.navbar {position:fixed;width:100%;background:linear-gradient(135deg,rgba(15,15,35,0.95),rgba(25,25,50,0.95));backdrop-filter:blur(20px);z-index:1000;padding:1.5rem 0}
+.nav-container {max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo {font-size:1.8rem;font-weight:800;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links {display:flex;gap:3rem;list-style:none}
+.nav-links a {color:#fff;text-decoration:none;font-weight:500;font-size:1.1rem;transition:all .3s}
+.nav-links a:hover {color:#00d4ff}
+.hero {height:100vh;background:linear-gradient(135deg,#0f0f23 0%,#1a1a3a 50%,#0f0f23 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero::before {content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;opacity:0.1}
+.hero-content {max-width:900px;padding:0 2rem;z-index:2}
+.hero h1 {font-size:clamp(3rem,8vw,6rem);font-weight:900;line-height:1;margin-bottom:2rem;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p {font-size:1.5rem;margin-bottom:3rem;color:#b8b8d8;line-height:1.6}
+.cta-primary {background:linear-gradient(45deg,#00d4ff,#7b00ff);color:#fff;padding:1.2rem 3rem;border:none;border-radius:50px;font-size:1.2rem;font-weight:600;cursor:pointer;transition:all .3s;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
+.cta-primary:hover {transform:translateY(-3px);box-shadow:0 20px 40px rgba(0,212,255,0.4)}
+.cta-secondary {color:#00d4ff;background:transparent;border:2px solid #00d4ff;padding:1rem 2.5rem;border-radius:50px;font-weight:600;margin-left:1rem;transition:all .3s}
+.cta-secondary:hover {background:#00d4ff;color:#0f0f23}
+.programs {padding:120px 0;background:linear-gradient(135deg,#1a1a3a,#0f0f23)}
+.container {max-width:1400px;margin:0 auto;padding:0 2rem}
+.section-title {text-align:center;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;margin-bottom:5rem;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.programs-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:3rem}
+.program-card {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:3rem;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.program-card::before {content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#00d4ff,#7b00ff)}
+.program-card:hover {transform:translateY(-15px);box-shadow:0 30px 60px rgba(0,212,255,0.2)}
+.icon {width:100px;height:100px;background:linear-gradient(135deg,#00d4ff,#7b00ff);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 2rem;color:#fff;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
+.program-card h3 {font-size:2rem;font-weight:700;margin-bottom:1rem;color:#fff}
+.program-card p {color:#b8b8d8;margin-bottom:2rem;font-size:1.1rem}
+.price-tag {font-size:3rem;font-weight:900;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem}
+.program-card.featured .price-tag {font-size:3.5rem}
+.btn-buy {background:linear-gradient(45deg,#00d4ff,#7b00ff);color:#fff;padding:1rem 2.5rem;border:none;border-radius:50px;font-weight:600;font-size:1.1rem;cursor:pointer;transition:all .3s;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
+.btn-buy:hover {transform:translateY(-2px);box-shadow:0 15px 40px rgba(0,212,255,0.4)}
+.testimonials {padding:120px 0;background:#0f0f23}
+.testimonials-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
+.testimonial {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));backdrop-filter:blur(20px);border-radius:20px;padding:2.5rem;border:1px solid rgba(255,255,255,0.1);text-align:center}
+.testimonial img {width:80px;height:80px;border-radius:50%;margin-bottom:1.5rem;border:3px solid #00d4ff}
+.testimonial p {font-style:italic;font-size:1.2rem;color:#b8b8d8;margin-bottom:1.5rem;line-height:1.7}
+.testimonial-author {font-weight:600;color:#fff;font-size:1.1rem}
+.cta-section {padding:120px 0;background:linear-gradient(135deg,#00d4ff,#7b00ff);text-align:center}
+.cta-section h2 {font-size:clamp(2.5rem,7vw,4.5rem);font-weight:900;margin-bottom:2rem}
+.cta-section p {font-size:1.4rem;margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.9)}
+.footer {background:#0a0a1a;padding:3rem 0;text-align:center;color:#b8b8d8}
+@media (max-width:768px) {.nav-links {display:none}.hero h1 {font-size:2.5rem}.hero-content {padding:0 1rem}.programs-grid,.testimonials-grid {grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar">
 <div class="nav-container">
-<div class="nav-logo">InShape Nutrition</div>
-<ul class="nav-menu">
-<li><a href="#accueil">Accueil</a></li>
-<li><a href="#programmes">Programmes</a></li>
-<li><a href="#temoignages">Temoignages</a></li>
+<div class="logo">InShape Nutrition</div>
+<ul class="nav-links">
+<li><a href="#home">Accueil</a></li>
+<li><a href="#programs">Programmes</a></li>
+<li><a href="#testimonials">Résultats</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-<div class="hamburger"><span></span><span></span><span></span></div>
 </div>
 </nav>
 
-<section id="accueil" class="hero">
-<div class="hero-container">
+<!-- Hero -->
+<section id="home" class="hero">
 <div class="hero-content">
-<h1 class="hero-title">Transforme ton corps avec <span class="gradient-text">InShape Nutrition</span></h1>
-<p class="hero-subtitle">Coaching nutrition personnalisé + Programme sportif</p>
-<div class="hero-buttons">
-<a href="#programmes" class="btn btn-primary">Voir programmes</a>
-<a href="#contact" class="btn btn-secondary">Contact</a>
-</div>
-</div>
-<div class="hero-image">
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fitness">
-</div>
+<h1>Transforme <br>ton corps <br>en 30 jours</h1>
+<p>Programme nutrition + entraînement par Thibaut Inchev<br>Coach certifié + 500 transformations</p>
+<button class="cta-primary">Commencer maintenant</button>
+<button class="cta-secondary">Voir résultats</button>
 </div>
 </section>
 
-<section id="programmes" class="programmes">
+<!-- Programs -->
+<section id="programs" class="programs">
 <div class="container">
-<h2 class="section-title">Nos Programmes</h2>
-<div class="programmes-grid">
-<div class="programme-card">
-<div class="programme-icon"><i class="fas fa-dumbbell"></i></div>
-<h3>Programme Musculation</h3>
-<p>4 semaines de suivi coach</p>
-<div class="price">197€</div>
+<h2 class="section-title">Choisis ton programme</h2>
+<div class="programs-grid">
+<div class="program-card">
+<div class="icon"><i class="fas fa-dumbbell"></i></div>
+<h3>Muscle Max</h3>
+<p>Prise de muscle sèche + force</p>
+<div class="price-tag">197€</div>
+<button class="btn-buy">Acheter</button>
 </div>
-<div class="programme-card featured">
-<div class="programme-icon"><i class="fas fa-fire"></i></div>
-<h3>Pack Premium</h3>
-<p>Nutrition + Sport illimité</p>
-<div class="price">297€ <span>397€</span></div>
+<div class="program-card featured">
+<div class="icon"><i class="fas fa-fire"></i></div>
+<h3>Transformation Complète</h3>
+<p>Nutrition + Entraînement + Suivi 1:1</p>
+<div class="price-tag">297€</div>
+<button class="btn-buy">Acheter (Populaire)</button>
 </div>
-<div class="programme-card">
-<div class="programme-icon"><i class="fas fa-weight"></i></div>
-<h3>Perte de Poids</h3>
-<p>Programme minceur efficace</p>
-<div class="price">147€</div>
+<div class="program-card">
+<div class="icon"><i class="fas fa-weight-hanging"></i></div>
+<h3>Dry Max</h3>
+<p>Perte de graisse + définition</p>
+<div class="price-tag">197€</div>
+<button class="btn-buy">Acheter</button>
 </div>
 </div>
 </div>
 </section>
 
-<section id="temoignages" class="temoignages">
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
 <div class="container">
-<h2 class="section-title">Témoignages clients</h2>
-<div class="temoignages-grid">
-<div class="temoignage">
-<img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100" alt="">
-<p>"-12kg en 2 mois ! Le meilleur coach."</p>
-<h4>Julie D.</h4>
+<h2 class="section-title">Résultats réels</h2>
+<div class="testimonials-grid">
+<div class="testimonial">
+<img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100" alt="">
+<p>"-15kg en 12 semaines. Thibaut est un génie."</p>
+<div class="testimonial-author">Lucas R. - Client Premium</div>
 </div>
-<div class="temoignage">
-<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100" alt="">
-<p>"+8kg de muscle. Programme parfait."</p>
-<h4>Thomas M.</h4>
+<div class="testimonial">
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100" alt="">
+<p>"+12kg de muscle. Meilleur coach ever."</p>
+<div class="testimonial-author">Emma L. - Muscle Max</div>
 </div>
-<div class="temoignage">
-<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100" alt="">
-<p>"Résultats durables. Merci InShape !"</p>
-<h4>Sarah L.</h4>
+<div class="testimonial">
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" alt="">
+<p>Corps de rêve. Programme parfait.</p>
+<div class="testimonial-author">Maxime D. - Dry Max</div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- CTA -->
+<section class="cta-section">
 <div class="container">
-<h2 class="section-title">Prêt à transformer ton corps ?</h2>
-<form class="contact-form">
-<input type="text" placeholder="Ton prénom">
-<input type="email" placeholder="Ton email">
-<textarea placeholder="Ton objectif..." rows="5"></textarea>
-<button type="submit" class="btn btn-primary">Commencer mon programme</button>
-</form>
+<h2>Prêt pour ta transformation ?</h2>
+<p>Rejoins +500 clients transformés par Thibaut Inchev.<br>Garantie résultats ou remboursé.</p>
+<button class="cta-primary" style="font-size:1.3rem;padding:1.5rem 4rem">Commencer ma transformation</button>
 </div>
 </section>
 
-<script>
-window.addEventListener('scroll',()=>{document.querySelector('.navbar').style.background=window.scrollY>50?'rgba(255,255,255,1)':'rgba(255,255,255,0.95)'});
-</script>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<p>&copy; 2024 InShape Nutrition - Thibaut Inchev. Tous droits réservés.</p>
+</div>
+</footer>
 
 </body>
 </html>

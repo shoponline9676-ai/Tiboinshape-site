@@ -3,147 +3,1446 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InShape Nutrition - Thibaut Inchev</title>
+<title>Transformation Été — Plan 8 Semaines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-* {margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body {background:#0f0f23;color:#fff;overflow-x:hidden}
-.navbar {position:fixed;width:100%;background:linear-gradient(135deg,rgba(15,15,35,0.95),rgba(25,25,50,0.95));backdrop-filter:blur(20px);z-index:1000;padding:1.5rem 0}
-.nav-container {max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
-.logo {font-size:1.8rem;font-weight:800;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-links {display:flex;gap:3rem;list-style:none}
-.nav-links a {color:#fff;text-decoration:none;font-weight:500;font-size:1.1rem;transition:all .3s}
-.nav-links a:hover {color:#00d4ff}
-.hero {height:100vh;background:linear-gradient(135deg,#0f0f23 0%,#1a1a3a 50%,#0f0f23 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
-.hero::before {content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;opacity:0.1}
-.hero-content {max-width:900px;padding:0 2rem;z-index:2}
-.hero h1 {font-size:clamp(3rem,8vw,6rem);font-weight:900;line-height:1;margin-bottom:2rem;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p {font-size:1.5rem;margin-bottom:3rem;color:#b8b8d8;line-height:1.6}
-.cta-primary {background:linear-gradient(45deg,#00d4ff,#7b00ff);color:#fff;padding:1.2rem 3rem;border:none;border-radius:50px;font-size:1.2rem;font-weight:600;cursor:pointer;transition:all .3s;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
-.cta-primary:hover {transform:translateY(-3px);box-shadow:0 20px 40px rgba(0,212,255,0.4)}
-.cta-secondary {color:#00d4ff;background:transparent;border:2px solid #00d4ff;padding:1rem 2.5rem;border-radius:50px;font-weight:600;margin-left:1rem;transition:all .3s}
-.cta-secondary:hover {background:#00d4ff;color:#0f0f23}
-.programs {padding:120px 0;background:linear-gradient(135deg,#1a1a3a,#0f0f23)}
-.container {max-width:1400px;margin:0 auto;padding:0 2rem}
-.section-title {text-align:center;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;margin-bottom:5rem;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.programs-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:3rem}
-.program-card {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:3rem;text-align:center;transition:all .4s;position:relative;overflow:hidden}
-.program-card::before {content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#00d4ff,#7b00ff)}
-.program-card:hover {transform:translateY(-15px);box-shadow:0 30px 60px rgba(0,212,255,0.2)}
-.icon {width:100px;height:100px;background:linear-gradient(135deg,#00d4ff,#7b00ff);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 2rem;color:#fff;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
-.program-card h3 {font-size:2rem;font-weight:700;margin-bottom:1rem;color:#fff}
-.program-card p {color:#b8b8d8;margin-bottom:2rem;font-size:1.1rem}
-.price-tag {font-size:3rem;font-weight:900;background:linear-gradient(45deg,#00d4ff,#7b00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem}
-.program-card.featured .price-tag {font-size:3.5rem}
-.btn-buy {background:linear-gradient(45deg,#00d4ff,#7b00ff);color:#fff;padding:1rem 2.5rem;border:none;border-radius:50px;font-weight:600;font-size:1.1rem;cursor:pointer;transition:all .3s;box-shadow:0 10px 30px rgba(0,212,255,0.3)}
-.btn-buy:hover {transform:translateY(-2px);box-shadow:0 15px 40px rgba(0,212,255,0.4)}
-.testimonials {padding:120px 0;background:#0f0f23}
-.testimonials-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
-.testimonial {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));backdrop-filter:blur(20px);border-radius:20px;padding:2.5rem;border:1px solid rgba(255,255,255,0.1);text-align:center}
-.testimonial img {width:80px;height:80px;border-radius:50%;margin-bottom:1.5rem;border:3px solid #00d4ff}
-.testimonial p {font-style:italic;font-size:1.2rem;color:#b8b8d8;margin-bottom:1.5rem;line-height:1.7}
-.testimonial-author {font-weight:600;color:#fff;font-size:1.1rem}
-.cta-section {padding:120px 0;background:linear-gradient(135deg,#00d4ff,#7b00ff);text-align:center}
-.cta-section h2 {font-size:clamp(2.5rem,7vw,4.5rem);font-weight:900;margin-bottom:2rem}
-.cta-section p {font-size:1.4rem;margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,0.9)}
-.footer {background:#0a0a1a;padding:3rem 0;text-align:center;color:#b8b8d8}
-@media (max-width:768px) {.nav-links {display:none}.hero h1 {font-size:2.5rem}.hero-content {padding:0 1rem}.programs-grid,.testimonials-grid {grid-template-columns:1fr}}
+  :root {
+    --bg: #080c10;
+    --bg2: #0e1419;
+    --bg3: #141c24;
+    --accent: #00e5ff;
+    --accent2: #ff6b35;
+    --accent3: #7fff6b;
+    --text: #e8edf2;
+    --muted: #5a6a7a;
+    --border: rgba(255,255,255,0.07);
+    --card: rgba(255,255,255,0.04);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --radius: 16px;
+    --radius-sm: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: #000; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: rgba(8,12,16,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--accent);
+  }
+  .nav-links {
+    display: flex; gap: 2px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--text); background: var(--card); }
+  .nav-links a.active { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 80px 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0,229,255,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255,107,53,0.06) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 0%, transparent 100%);
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,229,255,0.1);
+    border: 1px solid rgba(0,229,255,0.25);
+    border-radius: 99px;
+    padding: 6px 18px;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 12vw, 130px);
+    line-height: 0.9;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    font-size: 18px; color: var(--muted);
+    max-width: 560px; margin: 0 auto 3rem;
+    font-weight: 300;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center;
+    animation: fadeUp 0.6s 0.3s ease both;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-val {
+    font-family: var(--font-display);
+    font-size: 52px; line-height: 1;
+    color: var(--accent);
+  }
+  .hero-stat-label { font-size: 12px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+  .hero-scroll {
+    position: absolute; bottom: 2rem;
+    left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    animation: fadeUp 0.6s 0.5s ease both;
+  }
+  .hero-scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(var(--accent), transparent);
+    animation: scrollLine 1.5s infinite;
+  }
+  @keyframes scrollLine { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-tag {
+    font-family: var(--font-mono);
+    font-size: 11px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 6vw, 64px);
+    letter-spacing: 2px; line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .section-title span { color: var(--accent); }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .card:hover { border-color: rgba(0,229,255,0.2); transform: translateY(-2px); }
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 22px; letter-spacing: 1px;
+    color: var(--text); margin-bottom: 1rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 99px;
+    margin-bottom: 1rem;
+  }
+  .b-cyan { background: rgba(0,229,255,0.12); color: var(--accent); border: 1px solid rgba(0,229,255,0.25); }
+  .b-orange { background: rgba(255,107,53,0.12); color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
+  .b-green { background: rgba(127,255,107,0.12); color: var(--accent3); border: 1px solid rgba(127,255,107,0.25); }
+  .b-gray { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border); }
+
+  /* PROGRAMME */
+  .days-grid { display: grid; gap: 12px; }
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .day-card:hover { border-color: rgba(0,229,255,0.3); }
+  .day-card.open { border-color: var(--accent); }
+  .day-header {
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem;
+  }
+  .day-left { display: flex; align-items: center; gap: 1.25rem; }
+  .day-num {
+    font-family: var(--font-display);
+    font-size: 40px; line-height: 1;
+    color: rgba(255,255,255,0.08);
+    min-width: 50px;
+  }
+  .day-name {
+    font-family: var(--font-display);
+    font-size: 20px; letter-spacing: 1px;
+  }
+  .day-focus { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .day-arrow {
+    font-size: 18px; color: var(--muted);
+    transition: transform 0.3s;
+  }
+  .day-card.open .day-arrow { transform: rotate(90deg); color: var(--accent); }
+  .day-body {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+  }
+  .day-card.open .day-body { display: block; }
+  .ex-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .ex-table th {
+    text-align: left; padding: 6px 10px;
+    color: var(--muted); font-weight: 500;
+    font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  .ex-table td { padding: 10px 10px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .ex-table tr:last-child td { border-bottom: none; }
+  .ex-table .ex-name { font-weight: 500; }
+  .ex-table .ex-val {
+    font-family: var(--font-mono);
+    font-size: 12px; color: var(--accent);
+  }
+  .day-note {
+    margin-top: 1rem; padding: 10px 14px;
+    background: rgba(0,229,255,0.06);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 12px; color: var(--muted);
+    line-height: 1.5;
+  }
+  .rest-msg {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--muted); font-size: 14px;
+  }
+
+  /* NUTRITION */
+  .macro-bar-wrap { margin-bottom: 2rem; }
+  .macro-row {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 12px;
+  }
+  .macro-label { font-size: 12px; font-weight: 500; min-width: 100px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .macro-bar { flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden; }
+  .macro-fill { height: 100%; border-radius: 99px; transition: width 1s ease; }
+  .macro-val { font-family: var(--font-mono); font-size: 13px; min-width: 60px; text-align: right; }
+  .meals-tabs { display: flex; gap: 8px; margin-bottom: 2rem; flex-wrap: wrap; }
+  .meal-tab {
+    padding: 8px 18px; border-radius: 99px;
+    border: 1px solid var(--border);
+    background: transparent; color: var(--muted);
+    font-size: 13px; font-weight: 500; cursor: pointer;
+    transition: all 0.2s; font-family: var(--font-body);
+  }
+  .meal-tab:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+  .meal-tab.active { background: var(--accent); border-color: var(--accent); color: #000; }
+  .meal-panel { display: none; }
+  .meal-panel.active { display: block; }
+  .options-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .option-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: all 0.3s;
+  }
+  .option-card:hover { border-color: rgba(0,229,255,0.25); }
+  .opt-label {
+    font-family: var(--font-mono);
+    font-size: 10px; color: var(--accent);
+    letter-spacing: 2px; margin-bottom: 10px;
+  }
+  .opt-dish { font-size: 14px; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
+  .opt-macros { display: flex; gap: 8px; flex-wrap: wrap; }
+  .opt-macro-pill {
+    font-size: 11px; font-family: var(--font-mono);
+    padding: 3px 8px; border-radius: 99px;
+    background: rgba(255,255,255,0.06);
+    color: var(--muted);
+  }
+  .opt-macro-pill.prot { color: var(--accent); background: rgba(0,229,255,0.08); }
+
+  /* SUPPLEMENTS */
+  .supp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .supp-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+  .supp-card:hover { border-color: rgba(0,229,255,0.25); }
+  .supp-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .supp-name {
+    font-family: var(--font-display);
+    font-size: 28px; letter-spacing: 1px; margin-bottom: 0.5rem;
+  }
+  .supp-rows { margin-top: 1rem; }
+  .supp-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+  }
+  .supp-row:last-child { border-bottom: none; }
+  .supp-key { font-size: 12px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
+  .supp-val { font-size: 13px; color: var(--text); text-align: right; }
+  .supp-highlight { color: var(--accent); font-family: var(--font-mono); font-size: 22px; }
+
+  /* CALENDRIER */
+  .calendar-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 2rem; font-size: 12px;
+  }
+  .leg-item { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .cal-phase {
+    margin-bottom: 3rem;
+  }
+  .cal-phase-title {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1.25rem;
+  }
+  .cal-phase-label {
+    font-family: var(--font-display);
+    font-size: 18px; letter-spacing: 1px;
+  }
+  .cal-phase-line { flex: 1; height: 1px; background: var(--border); }
+  .cal-weeks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cal-week {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: all 0.3s;
+  }
+  .cal-week:hover { border-color: rgba(0,229,255,0.2); }
+  .cal-week-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1rem;
+  }
+  .cal-week-num {
+    font-family: var(--font-display);
+    font-size: 36px; color: rgba(255,255,255,0.08);
+  }
+  .cal-week-dates {
+    font-family: var(--font-mono);
+    font-size: 11px; color: var(--muted);
+  }
+  .cal-week-goal {
+    font-size: 13px; color: var(--text); margin-bottom: 1rem; font-weight: 500;
+  }
+  .cal-days-mini { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .cal-day-mini {
+    height: 28px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 600; letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .cd-muscle { background: rgba(0,229,255,0.15); color: var(--accent); }
+  .cd-cardio { background: rgba(255,107,53,0.15); color: var(--accent2); }
+  .cd-rest { background: rgba(255,255,255,0.04); color: var(--muted); }
+  .cd-mix { background: rgba(127,255,107,0.12); color: var(--accent3); }
+  .cal-prog-bar { height: 3px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden; margin-top: 1rem; }
+  .cal-prog-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.4)); }
+
+  /* PROGRESSION */
+  .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 3rem; }
+  .prog-week {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .prog-week::before {
+    content: attr(data-week);
+    position: absolute; top: -10px; right: 12px;
+    font-family: var(--font-display);
+    font-size: 80px; line-height: 1;
+    color: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+  .prog-week:hover { border-color: rgba(0,229,255,0.25); }
+  .prog-week-num { font-family: var(--font-mono); font-size: 11px; color: var(--accent); margin-bottom: 8px; letter-spacing: 2px; text-transform: uppercase; }
+  .prog-week-title { font-family: var(--font-display); font-size: 24px; margin-bottom: 10px; }
+  .prog-week-desc { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+  .prog-bar-wrap { height: 3px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden; }
+  .prog-bar-fill { height: 100%; border-radius: 99px; }
+
+  /* CONSEILS */
+  .tips-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .tips-group-title {
+    font-family: var(--font-display);
+    font-size: 22px; letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .tips-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .tip-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px; line-height: 1.5;
+    transition: all 0.2s;
+  }
+  .tip-item:hover { border-color: rgba(255,255,255,0.12); }
+  .tip-icon { min-width: 20px; font-size: 14px; margin-top: 1px; }
+  .tip-err .tip-icon { color: #ff4d4d; }
+  .tip-boost .tip-icon { color: var(--accent3); }
+
+  /* ROUTINE */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 70px; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+  .tl-item {
+    display: flex; gap: 0; align-items: flex-start;
+    margin-bottom: 6px;
+  }
+  .tl-time {
+    font-family: var(--font-mono);
+    font-size: 12px; color: var(--accent);
+    min-width: 70px; padding-top: 12px;
+    text-align: right; padding-right: 24px;
+  }
+  .tl-dot-wrap {
+    position: relative; min-width: 14px;
+    display: flex; justify-content: center; padding-top: 18px;
+    margin-right: 20px;
+  }
+  .tl-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--border); border: 1px solid rgba(255,255,255,0.2);
+  }
+  .tl-dot.highlight { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px rgba(0,229,255,0.5); }
+  .tl-content {
+    flex: 1; padding: 10px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+  }
+  .tl-content strong { color: var(--text); font-weight: 500; display: block; margin-bottom: 2px; }
+  .tl-content span { color: var(--muted); font-size: 12px; }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px;
+    margin-top: 4rem;
+  }
+  footer strong { color: var(--accent); }
+
+  /* UTILS */
+  .divider { height: 1px; background: var(--border); margin: 4rem 0; }
+  .stat-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin-bottom: 3rem;
+  }
+  .stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .stat-box-val {
+    font-family: var(--font-display);
+    font-size: 40px; line-height: 1;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .stat-box-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .options-grid { grid-template-columns: 1fr; }
+    .supp-grid, .cal-weeks, .prog-grid, .tips-cols { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .timeline::before { left: 60px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-<div class="nav-container">
-<div class="logo">InShape Nutrition</div>
-<ul class="nav-links">
-<li><a href="#home">Accueil</a></li>
-<li><a href="#programs">Programmes</a></li>
-<li><a href="#testimonials">Résultats</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SHREDDED</div>
+  <ul class="nav-links">
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#supplements">Suppléments</a></li>
+    <li><a href="#calendrier">Calendrier</a></li>
+    <li><a href="#progression">Progression</a></li>
+    <li><a href="#routine">Routine</a></li>
+    <li><a href="#conseils">Conseils</a></li>
+  </ul>
 </nav>
 
-<!-- Hero -->
-<section id="home" class="hero">
-<div class="hero-content">
-<h1>Transforme <br>ton corps <br>en 30 jours</h1>
-<p>Programme nutrition + entraînement par Thibaut Inchev<br>Coach certifié + 500 transformations</p>
-<button class="cta-primary">Commencer maintenant</button>
-<button class="cta-secondary">Voir résultats</button>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="hero-tag">Plan transformation • 8 semaines</div>
+    <h1>Corps<br><span>Esthétique</span><br>Été 2025</h1>
+    <p class="hero-sub">Programme haltères maison · Nutrition optimisée · Résultats visibles dès la semaine 4</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-val">8</div><div class="hero-stat-label">Semaines</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">5</div><div class="hero-stat-label">Séances/sem.</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">160g</div><div class="hero-stat-label">Protéines/j</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">1er<span style="font-size:28px"> Juil</span></div><div class="hero-stat-label">Deadline</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
 </div>
+
+<!-- PROGRAMME -->
+<section id="programme">
+  <div class="reveal">
+    <div class="section-tag">// 01 — Entraînement</div>
+    <h2 class="section-title">Programme<br><span>Semaine Type</span></h2>
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-box-val">5</div><div class="stat-box-label">Jours muscu</div></div>
+      <div class="stat-box"><div class="stat-box-val">3</div><div class="stat-box-label">Cardio/sem.</div></div>
+      <div class="stat-box"><div class="stat-box-val">50</div><div class="stat-box-label">Min/séance</div></div>
+      <div class="stat-box"><div class="stat-box-val">2</div><div class="stat-box-label">Jours repos</div></div>
+    </div>
+  </div>
+
+  <div class="days-grid reveal">
+
+    <!-- LUNDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">01</div>
+          <div>
+            <div class="day-name" style="color:var(--accent)">Lundi</div>
+            <div class="day-focus">Pectoraux — Focus haut des pecs 🔥</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-cyan">MUSCULATION · 50 min</span>
+        <table class="ex-table">
+          <tr><th>Exercice</th><th>Séries</th><th>Reps</th><th>Repos</th></tr>
+          <tr><td class="ex-name">Développé incliné haltères (30–45°)</td><td class="ex-val">4</td><td class="ex-val">10–12</td><td class="ex-val">75s</td></tr>
+          <tr><td class="ex-name">Développé plat haltères</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Écartés inclinés haltères</td><td class="ex-val">3</td><td class="ex-val">12–15</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Pompes pieds surélevés (décliné)</td><td class="ex-val">3</td><td class="ex-val">Max</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Pull-over haltère (1 seul)</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+        </table>
+        <div class="day-note">💡 Le développé incliné = exercice N°1. Commence toujours par lui, frais. Amplitude complète pour sentir l'étirement du haut du pec. Suivi de HIIT 20 min.</div>
+      </div>
+    </div>
+
+    <!-- MARDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">02</div>
+          <div>
+            <div class="day-name" style="color:#a78bfa">Mardi</div>
+            <div class="day-focus">Épaules — Effet V & largeur 💪</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-cyan">MUSCULATION + CARDIO · 80 min</span>
+        <table class="ex-table">
+          <tr><th>Exercice</th><th>Séries</th><th>Reps</th><th>Repos</th></tr>
+          <tr><td class="ex-name">Développé militaire haltères (assis)</td><td class="ex-val">4</td><td class="ex-val">10–12</td><td class="ex-val">75s</td></tr>
+          <tr><td class="ex-name">Élévations latérales</td><td class="ex-val">4</td><td class="ex-val">15</td><td class="ex-val">45s</td></tr>
+          <tr><td class="ex-name">Élévations frontales alternées</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">45s</td></tr>
+          <tr><td class="ex-name">Oiseau / élévations penchées</td><td class="ex-val">3</td><td class="ex-val">15</td><td class="ex-val">45s</td></tr>
+          <tr><td class="ex-name">Shrugs haltères (trapèzes)</td><td class="ex-val">3</td><td class="ex-val">15</td><td class="ex-val">45s</td></tr>
+        </table>
+        <div class="day-note">🏃 Cardio : Jogging 30 min à fréquence modérée, après la séance. Les élévations latérales créent la largeur des épaules = effet V immédiat.</div>
+      </div>
+    </div>
+
+    <!-- MERCREDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">03</div>
+          <div>
+            <div class="day-name" style="color:#34d399">Mercredi</div>
+            <div class="day-focus">Dos + Biceps — Largeur dorsale</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-green">MUSCULATION · 50 min</span>
+        <table class="ex-table">
+          <tr><th>Exercice</th><th>Séries</th><th>Reps</th><th>Repos</th></tr>
+          <tr><td class="ex-name">Rowing haltère 1 bras (appui genou)</td><td class="ex-val">4</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Rowing buste penché 2 haltères</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Face pull haltères</td><td class="ex-val">3</td><td class="ex-val">15</td><td class="ex-val">45s</td></tr>
+          <tr><td class="ex-name">Curl biceps alterné</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Curl marteau</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">45s</td></tr>
+        </table>
+        <div class="day-note">💡 Un dos large crée l'illusion d'une taille fine et renforce l'effet V. Aussi important que les pecs. Contracte bien les omoplates à chaque rowing.</div>
+      </div>
+    </div>
+
+    <!-- JEUDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">04</div>
+          <div>
+            <div class="day-name" style="color:var(--muted)">Jeudi</div>
+            <div class="day-focus">Repos actif — Récupération</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-gray">REPOS ACTIF · 30 min</span>
+        <div class="rest-msg" style="text-align:left; padding:0;">
+          <p style="margin-bottom:10px; color:var(--text);">Pas de musculation aujourd'hui. Le muscle pousse quand il récupère, pas pendant la séance.</p>
+          <p style="color:var(--muted); font-size:13px;">✓ Marche 30 min à rythme confortable<br>✓ Étirements statiques des pecs, épaules, dos<br>✓ Mobilité des hanches et chevilles</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENDREDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">05</div>
+          <div>
+            <div class="day-name" style="color:var(--accent)">Vendredi</div>
+            <div class="day-focus">Abdos + Pecs — Circuit intense</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-cyan">CIRCUIT · 50 min</span>
+        <table class="ex-table">
+          <tr><th>Exercice</th><th>Séries</th><th>Reps / Durée</th><th>Repos</th></tr>
+          <tr><td class="ex-name">Crunchs (contraction au sommet)</td><td class="ex-val">4</td><td class="ex-val">20</td><td class="ex-val">30s</td></tr>
+          <tr><td class="ex-name">Leg raises (jambes à 90°)</td><td class="ex-val">4</td><td class="ex-val">15–20</td><td class="ex-val">30s</td></tr>
+          <tr><td class="ex-name">Planche</td><td class="ex-val">3</td><td class="ex-val">45s</td><td class="ex-val">30s</td></tr>
+          <tr><td class="ex-name">Bicycle crunch</td><td class="ex-val">3</td><td class="ex-val">20/côté</td><td class="ex-val">30s</td></tr>
+          <tr><td class="ex-name">Développé incliné (rappel)</td><td class="ex-val">3</td><td class="ex-val">12</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Écartés plats haltères</td><td class="ex-val">3</td><td class="ex-val">15</td><td class="ex-val">60s</td></tr>
+        </table>
+        <div class="day-note">⚡ Abdos en premier, avant les pecs — tu seras frais et concentré. Les leg raises ciblent directement la graisse basse du ventre.</div>
+      </div>
+    </div>
+
+    <!-- SAMEDI -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">06</div>
+          <div>
+            <div class="day-name" style="color:var(--accent2)">Samedi</div>
+            <div class="day-focus">Jambes + Fessiers + Cardio</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-orange">MUSCULATION + CARDIO · 70 min</span>
+        <table class="ex-table">
+          <tr><th>Exercice</th><th>Séries</th><th>Reps</th><th>Repos</th></tr>
+          <tr><td class="ex-name">Goblet squat (haltère contre poitrine)</td><td class="ex-val">4</td><td class="ex-val">15</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Fentes marchées haltères</td><td class="ex-val">3</td><td class="ex-val">12/jambe</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Romanian Deadlift haltères</td><td class="ex-val">4</td><td class="ex-val">12</td><td class="ex-val">75s</td></tr>
+          <tr><td class="ex-name">Hip thrust (poids sur les cuisses)</td><td class="ex-val">3</td><td class="ex-val">15</td><td class="ex-val">60s</td></tr>
+          <tr><td class="ex-name">Mollets debout haltères</td><td class="ex-val">3</td><td class="ex-val">20</td><td class="ex-val">30s</td></tr>
+        </table>
+        <div class="day-note">🔥 Les jambes = plus gros muscle du corps. Squats et deadlifts brûlent énormément de calories même au repos. HIIT 20 min après la séance.</div>
+      </div>
+    </div>
+
+    <!-- DIMANCHE -->
+    <div class="day-card" onclick="toggleDay(this)">
+      <div class="day-header">
+        <div class="day-left">
+          <div class="day-num">07</div>
+          <div>
+            <div class="day-name" style="color:var(--muted)">Dimanche</div>
+            <div class="day-focus">Repos total — Obligatoire</div>
+          </div>
+        </div>
+        <div class="day-arrow">›</div>
+      </div>
+      <div class="day-body">
+        <span class="badge b-gray">REPOS COMPLET</span>
+        <div class="rest-msg" style="text-align:left; padding:0;">
+          <p style="color:var(--text); margin-bottom:10px;">Repos complet. C'est pendant la récupération que le corps reconstruit le muscle et brûle la graisse (GH nocturne). Ne saute pas ce jour.</p>
+          <p style="color:var(--muted); font-size:13px;">✓ Sommeil 7h30+ prioritaire<br>✓ Repas protéiné avant de dormir<br>✓ Préparation mentale pour la semaine suivante</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Programs -->
-<section id="programs" class="programs">
-<div class="container">
-<h2 class="section-title">Choisis ton programme</h2>
-<div class="programs-grid">
-<div class="program-card">
-<div class="icon"><i class="fas fa-dumbbell"></i></div>
-<h3>Muscle Max</h3>
-<p>Prise de muscle sèche + force</p>
-<div class="price-tag">197€</div>
-<button class="btn-buy">Acheter</button>
-</div>
-<div class="program-card featured">
-<div class="icon"><i class="fas fa-fire"></i></div>
-<h3>Transformation Complète</h3>
-<p>Nutrition + Entraînement + Suivi 1:1</p>
-<div class="price-tag">297€</div>
-<button class="btn-buy">Acheter (Populaire)</button>
-</div>
-<div class="program-card">
-<div class="icon"><i class="fas fa-weight-hanging"></i></div>
-<h3>Dry Max</h3>
-<p>Perte de graisse + définition</p>
-<div class="price-tag">197€</div>
-<button class="btn-buy">Acheter</button>
-</div>
-</div>
-</div>
+<!-- NUTRITION -->
+<section id="nutrition">
+  <div class="reveal">
+    <div class="section-tag">// 02 — Alimentation</div>
+    <h2 class="section-title">Nutrition<br><span>Plan Journalier</span></h2>
+
+    <div style="margin-bottom: 2.5rem;">
+      <div class="macro-row">
+        <div class="macro-label">Calories</div>
+        <div class="macro-bar"><div class="macro-fill" style="width:100%; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.3));"></div></div>
+        <div class="macro-val" style="color:var(--accent)">2000 kcal</div>
+      </div>
+      <div class="macro-row">
+        <div class="macro-label">Protéines</div>
+        <div class="macro-bar"><div class="macro-fill" style="width:80%; background:linear-gradient(90deg, #7fff6b, rgba(127,255,107,0.3));"></div></div>
+        <div class="macro-val" style="color:var(--accent3)">160 g</div>
+      </div>
+      <div class="macro-row">
+        <div class="macro-label">Glucides</div>
+        <div class="macro-bar"><div class="macro-fill" style="width:55%; background:linear-gradient(90deg, #ff6b35, rgba(255,107,53,0.3));"></div></div>
+        <div class="macro-val" style="color:var(--accent2)">200 g</div>
+      </div>
+      <div class="macro-row">
+        <div class="macro-label">Lipides</div>
+        <div class="macro-bar"><div class="macro-fill" style="width:35%; background:linear-gradient(90deg, #a78bfa, rgba(167,139,250,0.3));"></div></div>
+        <div class="macro-val" style="color:#a78bfa">55 g</div>
+      </div>
+    </div>
+
+    <div class="meals-tabs">
+      <button class="meal-tab active" onclick="showMeal(this, 'p1')">🌅 Petit-déj (7h)</button>
+      <button class="meal-tab" onclick="showMeal(this, 'p2')">☀️ Déjeuner (13h)</button>
+      <button class="meal-tab" onclick="showMeal(this, 'p3')">⚡ Post-séance (16h)</button>
+      <button class="meal-tab" onclick="showMeal(this, 'p4')">🌙 Dîner (20h)</button>
+      <button class="meal-tab" onclick="showMeal(this, 'rules')">📋 Règles</button>
+    </div>
+
+    <div id="p1" class="meal-panel active">
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="opt-label">// Option A</div>
+          <div class="opt-dish">3 œufs brouillés + flocons d'avoine 60g + fruits rouges</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">28g protéines</span>
+            <span class="opt-macro-pill">42g glucides</span>
+            <span class="opt-macro-pill">12g lipides</span>
+            <span class="opt-macro-pill">~380 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option B</div>
+          <div class="opt-dish">Yaourt grec 200g + granola 40g + 1 banane</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">22g protéines</span>
+            <span class="opt-macro-pill">55g glucides</span>
+            <span class="opt-macro-pill">8g lipides</span>
+            <span class="opt-macro-pill">~380 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option C</div>
+          <div class="opt-dish">2 tranches pain complet + 2 œufs + blanc de dinde 60g</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">30g protéines</span>
+            <span class="opt-macro-pill">35g glucides</span>
+            <span class="opt-macro-pill">10g lipides</span>
+            <span class="opt-macro-pill">~360 kcal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p2" class="meal-panel">
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="opt-label">// Option A</div>
+          <div class="opt-dish">Riz basmati 100g sec + poulet 180g + légumes poêlés + huile olive</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">48g protéines</span>
+            <span class="opt-macro-pill">80g glucides</span>
+            <span class="opt-macro-pill">12g lipides</span>
+            <span class="opt-macro-pill">~620 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option B</div>
+          <div class="opt-dish">Patate douce 200g + thon boîte 150g + salade + œuf dur</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">42g protéines</span>
+            <span class="opt-macro-pill">60g glucides</span>
+            <span class="opt-macro-pill">10g lipides</span>
+            <span class="opt-macro-pill">~570 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option C</div>
+          <div class="opt-dish">Pâtes complètes 90g sec + bœuf haché 5% 150g + sauce tomate</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">44g protéines</span>
+            <span class="opt-macro-pill">75g glucides</span>
+            <span class="opt-macro-pill">14g lipides</span>
+            <span class="opt-macro-pill">~600 kcal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p3" class="meal-panel">
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="opt-label">// Option A (idéale)</div>
+          <div class="opt-dish">Shaker whey 30g + 1 banane + 1 c.s. beurre de cacahuète</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">33g protéines</span>
+            <span class="opt-macro-pill">35g glucides</span>
+            <span class="opt-macro-pill">10g lipides</span>
+            <span class="opt-macro-pill">~360 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option B</div>
+          <div class="opt-dish">Fromage blanc 0% 200g + 1 poignée noix + 1 pomme</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">24g protéines</span>
+            <span class="opt-macro-pill">28g glucides</span>
+            <span class="opt-macro-pill">12g lipides</span>
+            <span class="opt-macro-pill">~310 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option C</div>
+          <div class="opt-dish">Omelette 3 œufs + 1 tranche pain complet + 1 café</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">24g protéines</span>
+            <span class="opt-macro-pill">20g glucides</span>
+            <span class="opt-macro-pill">16g lipides</span>
+            <span class="opt-macro-pill">~320 kcal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p4" class="meal-panel">
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="opt-label">// Option A (idéale)</div>
+          <div class="opt-dish">Saumon 180g + légumes vapeur + quinoa 80g</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">46g protéines</span>
+            <span class="opt-macro-pill">40g glucides</span>
+            <span class="opt-macro-pill">18g lipides</span>
+            <span class="opt-macro-pill">~510 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option B</div>
+          <div class="opt-dish">Blanc de poulet mariné 180g + riz 70g + brocolis</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">44g protéines</span>
+            <span class="opt-macro-pill">45g glucides</span>
+            <span class="opt-macro-pill">6g lipides</span>
+            <span class="opt-macro-pill">~450 kcal</span>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="opt-label">// Option C</div>
+          <div class="opt-dish">Thon 150g + lentilles 100g cuites + épinards sautés</div>
+          <div class="opt-macros">
+            <span class="opt-macro-pill prot">40g protéines</span>
+            <span class="opt-macro-pill">30g glucides</span>
+            <span class="opt-macro-pill">5g lipides</span>
+            <span class="opt-macro-pill">~330 kcal</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1rem; padding:14px 16px; background:rgba(0,229,255,0.06); border-left:2px solid var(--accent); border-radius:0 8px 8px 0; font-size:13px; color:var(--muted);">
+        🌙 Le soir : limite les glucides. Protéines + légumes = combo idéal. Le corps brûle la graisse la nuit si tu ne surcharges pas en glucides.
+      </div>
+    </div>
+
+    <div id="rules" class="meal-panel">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+        <div class="card"><div class="card-title" style="font-size:16px; color:var(--accent)">💧 Eau</div><p style="font-size:13px; color:var(--muted);">2,5 à 3L par jour minimum. 500ml avant chaque repas pour couper la faim naturellement.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px; color:#ff4d4d">🚫 Alcool</div><p style="font-size:13px; color:var(--muted);">Zéro alcool les 4 premières semaines. C'est le levier N°1 sur la graisse abdominale basse.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px; color:#ff4d4d">🚫 Sucre rapide</div><p style="font-size:13px; color:var(--muted);">Élimine sodas, jus industriels, viennoiseries et bonbons. Pic d'insuline = stockage graisse.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px; color:var(--accent3)">🥦 Légumes</div><p style="font-size:13px; color:var(--muted);">À chaque repas sans exception. Volume, fibres, vitamines, satiété sans calories.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px; color:var(--muted)">🧂 Sel</div><p style="font-size:13px; color:var(--muted);">Limite le sodium — rétention d'eau = ventre gonflé même si tu es sec. Évite les plats préparés.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px; color:var(--accent2)">⚖️ Peser</div><p style="font-size:13px; color:var(--muted);">Pèse tes aliments les 2 premières semaines pour calibrer ton œil. 100g de riz cuit ≠ 100g sec.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Testimonials -->
-<section id="testimonials" class="testimonials">
-<div class="container">
-<h2 class="section-title">Résultats réels</h2>
-<div class="testimonials-grid">
-<div class="testimonial">
-<img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100" alt="">
-<p>"-15kg en 12 semaines. Thibaut est un génie."</p>
-<div class="testimonial-author">Lucas R. - Client Premium</div>
-</div>
-<div class="testimonial">
-<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100" alt="">
-<p>"+12kg de muscle. Meilleur coach ever."</p>
-<div class="testimonial-author">Emma L. - Muscle Max</div>
-</div>
-<div class="testimonial">
-<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" alt="">
-<p>Corps de rêve. Programme parfait.</p>
-<div class="testimonial-author">Maxime D. - Dry Max</div>
-</div>
-</div>
-</div>
+<!-- SUPPLEMENTS -->
+<section id="supplements">
+  <div class="reveal">
+    <div class="section-tag">// 03 — Suppléments</div>
+    <h2 class="section-title">Suppléments<br><span>Protocole</span></h2>
+    <div class="supp-grid">
+      <div class="supp-card">
+        <div class="supp-icon">⚡</div>
+        <div class="supp-name">Créatine</div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:1rem;">Monohydrate — le plus étudié, le plus efficace, le moins cher.</div>
+        <div class="supp-rows">
+          <div class="supp-row"><div class="supp-key">Dose</div><div class="supp-val"><span class="supp-highlight">5g</span>/jour</div></div>
+          <div class="supp-row"><div class="supp-key">Quand</div><div class="supp-val">Après la séance (avec le repas ou shaker)</div></div>
+          <div class="supp-row"><div class="supp-key">Tous les jours ?</div><div class="supp-val">Oui, même jours sans entraînement</div></div>
+          <div class="supp-row"><div class="supp-key">Phase de charge</div><div class="supp-val">Non nécessaire — 5g/j suffit</div></div>
+          <div class="supp-row"><div class="supp-key">Effets attendus</div><div class="supp-val">+Force dès S3, meilleure récup, volume</div></div>
+        </div>
+      </div>
+      <div class="supp-card">
+        <div class="supp-icon">🥛</div>
+        <div class="supp-name">Whey</div>
+        <div style="font-size:13px; color:var(--muted); margin-bottom:1rem;">Isolate ou concentrate. Pas de mass gainer.</div>
+        <div class="supp-rows">
+          <div class="supp-row"><div class="supp-key">Utile ?</div><div class="supp-val">Oui si tu n'atteignas pas 160g via la nourriture</div></div>
+          <div class="supp-row"><div class="supp-key">Dose</div><div class="supp-val"><span class="supp-highlight">30g</span> (1 scoop)</div></div>
+          <div class="supp-row"><div class="supp-key">Quand</div><div class="supp-val">Dans les 60 min post-séance</div></div>
+          <div class="supp-row"><div class="supp-key">Obligatoire ?</div><div class="supp-val">Non — remplaçable par de la nourriture réelle</div></div>
+          <div class="supp-row"><div class="supp-key">Avec quoi</div><div class="supp-val">Eau ou lait d'amande, jamais de lait entier</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;">
+      <div class="section-tag" style="margin-bottom:1rem;">Optionnels selon budget</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+        <div class="card"><div class="card-title" style="font-size:16px;">☕ Caféine</div><p style="font-size:13px; color:var(--muted);">Café noir 30–45 min avant séance. Boost énergie + brûle-graisse naturel. Gratuit si tu as du café chez toi.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px;">☀️ Vitamine D3</div><p style="font-size:13px; color:var(--muted);">1000–2000 UI/jour. En Belgique le manque est quasi systématique — impacte directement testostérone et récupération.</p></div>
+        <div class="card"><div class="card-title" style="font-size:16px;">🌙 Magnésium</div><p style="font-size:13px; color:var(--muted);">Bisglycinate le soir. Améliore la qualité du sommeil et la récupération musculaire nocturne.</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-<div class="container">
-<h2>Prêt pour ta transformation ?</h2>
-<p>Rejoins +500 clients transformés par Thibaut Inchev.<br>Garantie résultats ou remboursé.</p>
-<button class="cta-primary" style="font-size:1.3rem;padding:1.5rem 4rem">Commencer ma transformation</button>
-</div>
+<!-- CALENDRIER -->
+<section id="calendrier">
+  <div class="reveal">
+    <div class="section-tag">// 04 — Planning</div>
+    <h2 class="section-title">Calendrier<br><span>8 Semaines</span></h2>
+
+    <div class="calendar-legend">
+      <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div> Muscu</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--accent2)"></div> Cardio</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--accent3)"></div> Mix</div>
+      <div class="leg-item"><div class="leg-dot" style="background:var(--muted)"></div> Repos</div>
+    </div>
+
+    <div class="cal-phase">
+      <div class="cal-phase-title">
+        <span class="badge b-gray">Phase 1 — Adaptation</span>
+        <div class="cal-phase-line"></div>
+      </div>
+      <div class="cal-weeks">
+        <div class="cal-week">
+          <div class="cal-week-header">
+            <div class="cal-week-num">S1</div>
+            <div class="cal-week-dates">7 – 13 Avril</div>
+          </div>
+          <div class="cal-week-goal">📍 Objectif : apprendre les mouvements, installer la routine</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-rest">Jeu<br>Repos</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:12%"></div></div>
+        </div>
+        <div class="cal-week">
+          <div class="cal-week-header">
+            <div class="cal-week-num">S2</div>
+            <div class="cal-week-dates">14 – 20 Avril</div>
+          </div>
+          <div class="cal-week-goal">📍 Objectif : maîtrise des exercices, charges calibrées</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-rest">Jeu<br>Repos</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:25%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cal-phase">
+      <div class="cal-phase-title">
+        <span class="badge b-cyan">Phase 2 — Intensification</span>
+        <div class="cal-phase-line"></div>
+      </div>
+      <div class="cal-weeks">
+        <div class="cal-week" style="border-color:rgba(0,229,255,0.2)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(0,229,255,0.25)">S3</div>
+            <div class="cal-week-dates">21 – 27 Avril</div>
+          </div>
+          <div class="cal-week-goal">⚡ Créatine en plein effet. +1 rep sur chaque exo principal</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-rest">Jeu<br>Repos</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:38%"></div></div>
+        </div>
+        <div class="cal-week" style="border-color:rgba(0,229,255,0.2)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(0,229,255,0.25)">S4</div>
+            <div class="cal-week-dates">28 Avr – 4 Mai</div>
+          </div>
+          <div class="cal-week-goal">👁️ Premiers signes visuels — épaules et pecs qui sortent</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-rest">Jeu<br>Repos</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:50%"></div></div>
+        </div>
+        <div class="cal-week" style="border-color:rgba(0,229,255,0.2)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(0,229,255,0.25)">S5</div>
+            <div class="cal-week-dates">5 – 11 Mai</div>
+          </div>
+          <div class="cal-week-goal">🔥 Transformation visible. L'entourage le remarque</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-cardio">Jeu<br>Cardi</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:62%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cal-phase">
+      <div class="cal-phase-title">
+        <span class="badge b-orange">Phase 3 — Peak Esthétique</span>
+        <div class="cal-phase-line"></div>
+      </div>
+      <div class="cal-weeks">
+        <div class="cal-week" style="border-color:rgba(255,107,53,0.25)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(255,107,53,0.2)">S6</div>
+            <div class="cal-week-dates">12 – 18 Mai</div>
+          </div>
+          <div class="cal-week-goal">⬆️ Cardio 4x/sem. Glucides réduits le soir. Définition abdominale</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-cardio">Jeu<br>Cardi</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-cardio">Dim<br>Marche</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:75%; background:linear-gradient(90deg, var(--accent2), rgba(255,107,53,0.4));"></div></div>
+        </div>
+        <div class="cal-week" style="border-color:rgba(255,107,53,0.25)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(255,107,53,0.2)">S7</div>
+            <div class="cal-week-dates">19 – 25 Mai</div>
+          </div>
+          <div class="cal-week-goal">💎 Corps sec et dessiné. Abdos du dessus visibles</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-cardio">Jeu<br>Cardi</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-cardio">Dim<br>Marche</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:88%; background:linear-gradient(90deg, var(--accent2), rgba(255,107,53,0.4));"></div></div>
+        </div>
+        <div class="cal-week" style="border-color:rgba(127,255,107,0.3)">
+          <div class="cal-week-header">
+            <div class="cal-week-num" style="color:rgba(127,255,107,0.2)">S8</div>
+            <div class="cal-week-dates">26 Mai – 1er Juil</div>
+          </div>
+          <div class="cal-week-goal">🏆 OBJECTIF ATTEINT — Corps esthétique pour l'été</div>
+          <div class="cal-days-mini">
+            <div class="cal-day-mini cd-muscle">Lun<br>Pecs</div>
+            <div class="cal-day-mini cd-mix">Mar<br>Ép.</div>
+            <div class="cal-day-mini cd-muscle">Mer<br>Dos</div>
+            <div class="cal-day-mini cd-cardio">Jeu<br>Cardi</div>
+            <div class="cal-day-mini cd-muscle">Ven<br>Abd</div>
+            <div class="cal-day-mini cd-mix">Sam<br>Jam.</div>
+            <div class="cal-day-mini cd-rest">Dim<br>Off</div>
+          </div>
+          <div class="cal-prog-bar"><div class="cal-prog-fill" style="width:100%; background:linear-gradient(90deg, var(--accent3), rgba(127,255,107,0.4));"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<p>&copy; 2024 InShape Nutrition - Thibaut Inchev. Tous droits réservés.</p>
-</div>
+<!-- PROGRESSION -->
+<section id="progression">
+  <div class="reveal">
+    <div class="section-tag">// 05 — Résultats</div>
+    <h2 class="section-title">Progression<br><span>Attendue</span></h2>
+    <div class="prog-grid">
+      <div class="prog-week" data-week="1">
+        <div class="prog-week-num">// Semaine 01</div>
+        <div class="prog-week-title">Installation</div>
+        <div class="prog-week-desc">Douleurs musculaires normales (DOMS). Apprendre les mouvements et trouver tes charges. Pas de progression visible attendue — c'est normal.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:12%; background:var(--muted);"></div></div>
+      </div>
+      <div class="prog-week" data-week="2">
+        <div class="prog-week-num">// Semaine 02</div>
+        <div class="prog-week-title">Adaptation</div>
+        <div class="prog-week-desc">Les douleurs diminuent fortement. Tu maîtrises les exercices. Commence à augmenter légèrement les charges (+1kg sur les gros mouvements).</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:25%; background:var(--muted);"></div></div>
+      </div>
+      <div class="prog-week" data-week="3">
+        <div class="prog-week-num">// Semaine 03</div>
+        <div class="prog-week-title">Force en hausse</div>
+        <div class="prog-week-desc">La créatine fait pleinement effet. +1 rep ou +1kg sur les mouvements principaux. Ventre légèrement moins rond. Énergie en séance nettement meilleure.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:38%; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.4));"></div></div>
+      </div>
+      <div class="prog-week" data-week="4">
+        <div class="prog-week-num">// Semaine 04</div>
+        <div class="prog-week-title">Premiers signes visuels</div>
+        <div class="prog-week-desc">Muscles plus "durs" et ronds. Épaules qui commencent à sortir. Ceinture légèrement affinée. Quelqu'un de proche te fera une remarque.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:50%; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.4));"></div></div>
+      </div>
+      <div class="prog-week" data-week="5">
+        <div class="prog-week-num">// Semaine 05</div>
+        <div class="prog-week-title">Transformation visible</div>
+        <div class="prog-week-desc">Les gens le remarquent sans que tu le dises. Pecs hauts qui ressortent. Ventre sensiblement plus plat. Corps en V qui se forme. Photo VS S1 = choc.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:63%; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.4));"></div></div>
+      </div>
+      <div class="prog-week" data-week="6">
+        <div class="prog-week-num">// Semaine 06</div>
+        <div class="prog-week-title">Intensification</div>
+        <div class="prog-week-desc">Augmente cardio à 4x/semaine. Réduis les glucides le soir. Définition abdominale qui apparaît — les lignes du dessus commencent à se dessiner.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:75%; background: linear-gradient(90deg, var(--accent2), rgba(255,107,53,0.4));"></div></div>
+      </div>
+      <div class="prog-week" data-week="7">
+        <div class="prog-week-num">// Semaine 07</div>
+        <div class="prog-week-title">Peak Esthétique</div>
+        <div class="prog-week-desc">Corps sec et dessiné. Abdos du dessus visibles. Épaules larges et carrées. Corps en V formé. Tu es fier de te regarder dans le miroir.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:88%; background: linear-gradient(90deg, var(--accent2), rgba(255,107,53,0.4));"></div></div>
+      </div>
+      <div class="prog-week" data-week="8" style="border-color:rgba(127,255,107,0.4)">
+        <div class="prog-week-num" style="color:var(--accent3)">// Semaine 08 — FINAL</div>
+        <div class="prog-week-title" style="color:var(--accent3)">Objectif Atteint</div>
+        <div class="prog-week-desc">Corps esthétique pour l'été. Pecs remontés et dessinés. Abdos visibles. Épaules larges. Tu portes ce que tu veux avec confiance. Mission accomplie.</div>
+        <div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:100%; background: linear-gradient(90deg, var(--accent3), rgba(127,255,107,0.4));"></div></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <div class="card-title" style="font-size:18px; margin-bottom:1rem;">📊 Comment mesurer ta progression</div>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
+        <div style="padding:12px 14px; background:rgba(0,229,255,0.06); border-radius:8px; border:1px solid rgba(0,229,255,0.15);">
+          <div style="font-size:12px; color:var(--accent); font-weight:600; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;">Photos</div>
+          <div style="font-size:13px; color:var(--muted);">Chaque lundi matin, à jeun. Face + profil. Même lumière, même miroir. C'est ton indicateur N°1.</div>
+        </div>
+        <div style="padding:12px 14px; background:rgba(127,255,107,0.06); border-radius:8px; border:1px solid rgba(127,255,107,0.15);">
+          <div style="font-size:12px; color:var(--accent3); font-weight:600; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;">Charges</div>
+          <div style="font-size:13px; color:var(--muted);">Note tes poids et reps après chaque séance. Si tu ne progresses pas en 2 semaines, augmente l'intensité.</div>
+        </div>
+        <div style="padding:12px 14px; background:rgba(255,255,255,0.04); border-radius:8px; border:1px solid var(--border);">
+          <div style="font-size:12px; color:var(--muted); font-weight:600; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;">Poids balance</div>
+          <div style="font-size:13px; color:var(--muted);">3x/semaine le matin à jeun. Prends la moyenne — ne te fixe pas sur un chiffre isolé.</div>
+        </div>
+        <div style="padding:12px 14px; background:rgba(255,107,53,0.06); border-radius:8px; border:1px solid rgba(255,107,53,0.15);">
+          <div style="font-size:12px; color:var(--accent2); font-weight:600; margin-bottom:6px; text-transform:uppercase; letter-spacing:1px;">Tour de taille</div>
+          <div style="font-size:13px; color:var(--muted);">1x/semaine au niveau du nombril. C'est la mesure la plus objective pour la graisse abdominale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTINE -->
+<section id="routine">
+  <div class="reveal">
+    <div class="section-tag">// 06 — Organisation</div>
+    <h2 class="section-title">Routine<br><span>Journée Type</span></h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+      <div>
+        <div class="section-tag" style="margin-bottom:1rem; font-size:12px;">Jours d'entraînement</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">07h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>Réveil + Eau</strong><span>500ml d'eau immédiatement — hydratation nocturne à compenser</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">07h15</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Petit-déjeuner</strong><span>Option A, B ou C + créatine 5g</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">08h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Café noir</strong><span>Si besoin d'énergie — 30 min avant la séance max</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">09h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>SÉANCE MUSCULATION</strong><span>50 min. Téléphone en mode avion. Focus total.</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">10h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Cardio HIIT</strong><span>20 min directement après la séance si programmé</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">10h30</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>Shaker whey + créatine</strong><span>Fenêtre anabolique — maximise la récupération</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">13h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Déjeuner complet</strong><span>Riz/pâtes/patate douce + protéine + légumes</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">17h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Collation protéinée</strong><span>Fromage blanc, whey, ou omelette</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">20h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Dîner léger</strong><span>Protéines + légumes. Glucides minimaux le soir.</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">22h30</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>Coucher</strong><span>7h30 minimum. La GH brûle la graisse et reconstruit le muscle la nuit.</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag" style="margin-bottom:1rem; font-size:12px;">Jours de repos</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-time">07h30</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>Réveil naturel</strong><span>Pas d'alarme si possible — le sommeil est prioritaire</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">08h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Petit-déjeuner + créatine</strong><span>Continue la créatine même sans entraînement</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">10h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Marche 30 min</strong><span>Ou mobilité/étirements. Pas de muscu.</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">13h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Déjeuner</strong><span>Légèrement moins calorique que les jours de séance</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">17h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Collation légère</strong><span>Fromage blanc, quelques fruits</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">20h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+            <div class="tl-content"><strong>Dîner + magnésium</strong><span>Dîner protéiné. Magnésium bisglycinate le soir.</span></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-time">22h00</div>
+            <div class="tl-dot-wrap"><div class="tl-dot highlight"></div></div>
+            <div class="tl-content"><strong>Coucher tôt</strong><span>Profite des jours de repos pour dormir plus — c'est là que tu progresses.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSEILS -->
+<section id="conseils">
+  <div class="reveal">
+    <div class="section-tag">// 07 — Stratégie</div>
+    <h2 class="section-title">Conseils<br><span>& Astuces</span></h2>
+    <div class="tips-cols">
+      <div>
+        <div class="tips-group-title"><span style="color:#ff4d4d;">✗</span> Erreurs à éviter</div>
+        <ul class="tips-list">
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Charges trop lourdes sur le développé incliné avec mauvaise technique. L'amplitude complète prime toujours sur les kilos.</div></li>
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Sauter des séances et essayer de "rattraper" le lendemain. La surcompensation double n'existe pas — tu te blesses juste plus vite.</div></li>
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Manger "propre" mais en trop grande quantité. Les calories comptent même avec du riz et du poulet. Pèse les 2 premières semaines.</div></li>
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Croire que le cardio seul donnera des abdos. Les abdos se font à 70% dans l'assiette. La graisse se perd avec le déficit calorique.</div></li>
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Négliger le dos. Un dos large crée l'illusion d'une taille fine et amplifie l'effet V — aussi important que les pecs.</div></li>
+          <li class="tip-item tip-err"><div class="tip-icon">✗</div><div>Peser chaque jour et paniquer devant les fluctuations normales. Prends une moyenne sur 3 jours. Le corps retient de l'eau selon l'hydratation.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="tips-group-title"><span style="color:var(--accent3)">+</span> Boosters de résultats</div>
+        <ul class="tips-list">
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Supprime totalement l'alcool les 4 premières semaines. Levier N°1 sur la graisse abdominale basse — l'alcool bloque la lipolyse 48h.</div></li>
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Dors 7h30 minimum. La GH est sécrétée pendant le sommeil profond — elle brûle la graisse ET construit le muscle simultanément.</div></li>
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Surcharge progressive : +1 rep ou +0,5–1kg toutes les 1–2 semaines sur chaque mouvement. C'est ça qui force le corps à changer.</div></li>
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Connexion cerveau-muscle sur les pecs : contracte intentionnellement le haut du pec à chaque rep. La visualisation amplifie le résultat.</div></li>
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Bois 500ml d'eau avant chaque repas — réduit la faim de 30% sans aucune calorie. Simple et sous-estimé.</div></li>
+          <li class="tip-item tip-boost"><div class="tip-icon">+</div><div>Pompes inclinées (pieds sur une chaise) hors séance, 3x15 à tout moment. Active les pecs hauts en dehors de tes séances normales.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Plan créé pour le <strong>1er juillet 2025</strong> — 8 semaines · Haltères maison · Esthétique prioritaire<br>
+  <span style="font-size:11px; margin-top:8px; display:block;">Suis chaque onglet. Note chaque séance. Prends des photos. Tu verras la différence.</span>
 </footer>
 
+<script>
+  function toggleDay(el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.day-card').forEach(d => d.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  }
+
+  function showMeal(btn, id) {
+    document.querySelectorAll('.meal-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.meal-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i * 0.05) + 's';
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Active nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
